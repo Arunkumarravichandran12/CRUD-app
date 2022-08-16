@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+  <title>stutendManagement</title>
+<style>
+  label{
+   margin-top: 10px;
+   margin-left: 10px;
+   text-align: left;
+   font-size: 18px;
+   display: inline-block; 
+  width: 100px;
+}
+input{
+    height: 20px;
+    width: 300px;
+    border:1px solid #000;
+    margin-top: 10px;
+    margin-left: 20px;
+    
+}
+button{
+  background-color: black;
+  color: white;
+  border-radius: 12px;
+  margin-left: 130px;
+  height: 20px;
+  width: 100px;
+}
+</style>
+</head>
+<body>
+    <div className='information'>
+      
+      <h1 >WELCOME !</h1>
+      <form method="post">
+         <label>First Name &nbsp;:</label>
+          <input type="text"  name='firstName' value="<%= y.firstName %>"  required/>
+          
+          <label style="text-align:right; width:200px" >LastName &nbsp;:</label> 
+          <input type="text" name='lastName' value="<%= y.lastName %>" style="height:20px ;flex:0 0 200px ; margin-left:20px" required/>
+           <br></br>
+           
+          <label>Location&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+           <input type="text" name='location' value="<%= y.location %>" required/>
+          <br></br>
+          
+          <label>Email&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;:</label> 
+          <input type="text" name='email'  value="<%= y.email %>" required/>
+          <br></br>
+          
+          <div type="number" name="dob" >
+          <label>DOB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+          <input type="text"  placeholder='DD' name='date' value="<%= x[0] %>"  style="width:40px ;text-align:right" required/>
+          <input type="text" placeholder='MM' name='month' value="<%= x[1] %>" style="width:40px;margin-left:20px;text-align:right" required/>
+
+          <input type="text" placeholder='YY' name='year' value="<%= x[2] %>" style="width:40px;margin-left:20px;text-align:right" required/>
+          
+        </div>
+          
+          <br></br>
+          
+          <label>Education&nbsp; &nbsp;&nbsp;:</label>
+          <input type="text" name='education' value="<%= y.education %>" required />
+          <br></br>
+          
+          <label>About&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+          <input type="text" name='about' style="height:100px"/> 
+          <input type="hidden" value="<%= y.ID %>" />
+          <br></br>
+          
+           <button >SUBMIT</button>
+           
+      </form>
+    </div>
+    </body>
+    </html>

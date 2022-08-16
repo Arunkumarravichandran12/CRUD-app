@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <title>Student management system</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <h1>Student management  system</h1>
+    
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Location</th>
+            <th>Email</th>
+            <th>Dob</th>
+            <th>Education</th>
+        </tr>
+        <tbody>
+
+              <% for(var i=0;i<s.length; i++){ %>  
+            <tr>
+                <td><%= s[i].ID %></td>
+                <td><%= s[i].firstName  %></td>
+                <td><%= s[i].lastName   %></td>
+                <td><%= s[i].location   %></td>
+                <td><%= s[i].email      %></td>
+                <td><%= s[i].dob        %></td>
+                <td><%= s[i].education  %></td>
+            </tr>
+          <% } %>  
+
+          
+          
+        </tbody>
+    </table>
+
+</body>
+</html>
